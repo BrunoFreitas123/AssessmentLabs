@@ -1,0 +1,134 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+      "header header"   
+      "article aside"   
+      "form-container form-container"
+      "footer footer";
+  grid-template-columns: 3fr 2fr;
+  gap: 5px;
+  background-color:grey;
+  padding: 5px;
+}
+
+.container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+}
+
+.container > div.header {
+  grid-area: header;
+  text-align: center;
+  background: #000;
+  color: rgb(0, 255, 238);
+  padding: 20px;
+  font-size: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+  color: #ffe600;
+}
+
+
+.container > div.article {
+  grid-area: article;
+  background-color: grey;
+  padding: 20px;
+}
+
+.container > div.aside {
+  grid-area: aside;
+  background-color: #4E3629;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  font-style: italic;
+  text-align: center;
+}
+
+.container > div.form-container {
+  grid-area: form-container;
+  text-align: center;
+  padding: 3%;
+  margin: 5% auto;
+  max-width: 400px;
+  background-color: #4E3629;
+  border-radius: 10px;
+  box-shadow: 0px 3px 5px rgb(236, 179, 19);
+  color: bisque;
+}
+
+.botao-envio {
+  background-color: #182da5;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.container > div.footer {
+  grid-area: footer;
+  text-align: center;
+  padding: 15px;
+  background-color: black;
+  color: rgb(0, 255, 238);
+}
+
+footer a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: #ffe600
+}
+
+
+
+
+
+
+
+
+
+
