@@ -11,7 +11,7 @@ body {
     "article aside"
     "form-container form-container"
     "footer footer";
-  grid-template-collums: 3fr 2fr;
+  grid-template-columns: 3fr 2fr;
   gap: 5px;
   background-color: grey;
   padding: 5px;
