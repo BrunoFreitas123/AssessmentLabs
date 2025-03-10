@@ -7,28 +7,26 @@ body {
 .container {
   display: grid;
   grid-template-areas:
-    "header header"
-    "article aside"
-    "form-container form-container"
-    "footer footer";
-  grid-template-columns: 3fr 2fr;
+    "header"
+    "content"
+    "footer";
   gap: 5px;
   background-color: grey;
   padding: 5px;
 }
 
-.container>div {
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 10px;
-}
-
-.container>div.header {
+.header {
   grid-area: header;
   text-align: center;
   background: #000;
   color: rgb(0, 255, 238);
   padding: 20px;
   font-size: 20px;
+}
+
+nav ul {
+  padding: 0;
+  list-style: none;
 }
 
 nav ul li {
@@ -47,14 +45,26 @@ nav ul li a:hover {
   color: #ffe600;
 }
 
+.content {
+  grid-area: content;
+  display: grid;
+  grid-template-areas:
+    "article aside"
+    "form-container form-container";
+  grid-template-columns: 2fr 1fr;
+  gap: 10px;
+  width: 100%;
+}
 
-.container>div.article {
+.article {
   grid-area: article;
   background-color: grey;
   padding: 20px;
+  color: white;
+  border-radius: 5px;
 }
 
-.container>div.aside {
+.aside {
   grid-area: aside;
   background-color: #4E3629;
   color: white;
@@ -64,16 +74,18 @@ nav ul li a:hover {
   text-align: center;
 }
 
-.container>div.form-container {
+.form-container {
   grid-area: form-container;
   text-align: center;
   padding: 3%;
-  margin: 5% auto;
-  max-width: 400px;
+  margin-top: 20px;
+  width: 20%;
   background-color: #4E3629;
   border-radius: 10px;
   box-shadow: 0px 3px 5px rgb(236, 179, 19);
   color: bisque;
+  justify-self: center;
+  margin-bottom: 1%;
 }
 
 .botao-envio {
@@ -108,7 +120,8 @@ textarea {
   border-radius: 5px;
 }
 
-.container>div.footer {
+/* Rodapé */
+.footer {
   grid-area: footer;
   text-align: center;
   padding: 15px;
@@ -123,5 +136,5 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
-  color: #ffe600
+  color: #ffe600;
 }
